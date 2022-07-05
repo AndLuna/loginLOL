@@ -1,0 +1,80 @@
+/* importando uma fonte para o projeto */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+/* eliminando toda a configuracao previa que o navegador pode ter */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* chamo a pseudoclasse root */
+:root {
+  /* e crio VARIAVEIS pra armazenar as cores que irei utilizar*/
+  --white: #fff;
+  --whitesmoke: #f9f9f9;
+  --light-grey: #ececec;
+  --grey: #c4c4c4;
+  --medium-grey: #a7a7a7;
+  --deep-grey: #343434;
+  --black: #000000;
+  --blue: #1b77f3;
+  --red: #cf3c3f;
+
+
+}
+
+/* configurando as dimensoes do login */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  /* ao esticar a tela: definindo um pad dinamico que nao ultrapasse um limite - minimo, desejavel e maximo */
+  padding: clamp(35px, 8%, 75px);
+  /* background-color: #999; */
+  /* utilizando o background-color: #999 eu consigo enxergar as dimensoes da coluna de Login  */
+}
+
+.login__logo {
+  width: 130px;
+  margin-bottom: 80px;
+}
+
+.login__title {
+  color: var(--deep-grey);
+  /* utilizei o nome da variavel aqui  */
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.login__label {
+  /* background-color: red;  caso eu quisesse por um background na label de loguin*/
+  display: black;
+  margin-bottom: 20px;
+  width: 100%;
+
+}
+
+.input {
+  /* input é como se fosse uma subclasse de login label */
+  width: 100%;  /*largura da barrinha de nome de usuario */
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 5px;
+  outline: none;  /* serve para tirar a borda azul de selecionado */
+  font-size: 0.9em; /* tamanho da fonte para tudo que eu digitar nesse input  */
+  padding: 25px 10px 10px;   /* dimensoes na barra de imput  */
+  font-weight: 600;  /* deixa a letra mais escura*/
+  color:var(--deep-grey);
+}
+
+.login__label span {
+  position:absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  tex-transform:uppercase;  
